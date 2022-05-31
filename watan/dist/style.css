@@ -5,13 +5,9 @@
   font-family: 'Dosis', sans-serif;
 }
 html {
-  background: #000;
   height: 100%;
 }
 body {
-  background: #000;
-  background-image: url('https://images.unsplash.com/photo-1568870217912-18f8e402efb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80');
-  background-size: cover;
   color: #fff;
   display: table;
   height: 100%;
