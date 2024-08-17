@@ -22,8 +22,7 @@ footer {
   bottom: 0px;
   width: 100%;
   display: flex;
-  align-items: center;
-  text-align: center;
+
   justify-content: space-between;
   flex-direction: column;
   padding: 20px 0px;
@@ -36,13 +35,10 @@ p {
 .social {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 40px;
 }
 
@@ -51,7 +47,7 @@ p {
   background: rgb(248, 248, 248);
   color: rgb(0, 0, 15);
   border-radius: 50%;
-  margin: 10px;
+  margin: 8px;
   width: 50px;
   height: 50px;
   font-size: 25px;
@@ -102,14 +98,14 @@ p {
 .wrapper .icon:hover .tooltip {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
-.wrapper .linkedin,
-.wrapper .linkedin .tooltip,
-.wrapper .linkedin .tooltip::before {
+.wrapper .Telegrm,
+.wrapper .Telegrm .tooltip,
+.wrapper .Telegrm .tooltip::before {
   color: #0077b5;
 }
-.wrapper .linkedin:hover,
-.wrapper .linkedin:hover .tooltip,
-.wrapper .linkedin:hover .tooltip::before {
+.wrapper .Telegrm:hover,
+.wrapper .Telegrm:hover .tooltip,
+.wrapper .Telegrm:hover .tooltip::before {
   background: #0077b5;
   color: aliceblue;
 }
@@ -158,7 +154,6 @@ p {
 
 <footer>
   <div class="social">
-    <p>Medemia Academy</p>
     <ul class="wrapper">
 
       <a href="https://web.facebook.com/profile.php?id=61563444336398" target="_blank">
@@ -174,7 +169,7 @@ p {
         </li>
       </a>
       <a href="https://t.me/medemia_academy" target="_blank">
-        <li class="icon linkedin">
+        <li class="icon Telegrm">
           <span class="tooltip">Telegrm</span>
           <span><i class="fab fa-telegram"></i></span>
         </li>
@@ -182,9 +177,6 @@ p {
 
     </ul>
   </div>
-  <div style="text-align: center;" class="final_text"></div>
-  <p>Copyright &copy; All rights reserved 2024
-    <br> Medemia Academy
-  </p>
+
 </footer>
 </html>
