@@ -1,134 +1,184 @@
 <html>
+
 <style>
-body {
-    background: #D0D8DB;
-    padding-top: 60px;
-    padding-bottom: 40px;
-}
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
 
-textarea {
-    resize: none;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-
-.svg-inline--fa {
-  vertical-align: -0.200em;
-}
-
-.rounded-social-buttons {
-  text-align: center;
-}
-
-.rounded-social-buttons .social-button {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  width: 3.125rem;
-  height: 3.125rem;
-  border: 0.125rem solid transparent;
+* {
+  margin: 0;
   padding: 0;
-  text-decoration: none;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+footer {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
   text-align: center;
-  color: #fefefe;
-  font-size: 1.5625rem;
-  font-weight: normal;
-  line-height: 2em;
-  border-radius: 1.6875rem;
-  transition: all 0.5s ease;
-  margin-right: 0.25rem;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px 0px;
+  background: #035573;
+  border-top: aliceblue 5px solid;
 }
 
-.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-  -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
+p {
+  color: aliceblue;
 }
 
-.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-telegram, .fa-tiktok, .fa-youtube, .fa-instagram {
-  font-size: 30px;
-  margin-top: 9px;
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.rounded-social-buttons .social-button.facebook {
-  background: #3b5998;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
 }
 
-.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
-  color: #3b5998;
-  background: #fefefe;
-  border-color: #3b5998;
+.wrapper .icon {
+  position: relative;
+  background: aliceblue;
+  color: rgb(0, 0, 15);
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.rounded-social-buttons .social-button.twitter {
-  background: #55acee;
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: aliceblue;
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
-  color: #55acee;
-  background: #fefefe;
-  border-color: #55acee;
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: aliceblue;
+  top: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.rounded-social-buttons .social-button.linkedin {
-  background: #007bb5;
+.wrapper .icon:hover .tooltip {
+  top: 60px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
-  color: #007bb5;
-  background: #fefefe;
-  border-color: #007bb5;
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.rounded-social-buttons .social-button.tiktok {
-  background: #000000;
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0077b5;
+  color: aliceblue;
 }
 
-.rounded-social-buttons .social-button.tiktok:hover, .rounded-social-buttons .social-button.tiktok:focus {
-  color: #000000;
-  background: #fefefe;
-  border-color: #000000;
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #4267b2;
+  color: aliceblue;
 }
 
-.rounded-social-buttons .social-button.youtube {
-  background: #bb0000;
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: aliceblue;
 }
 
-.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
-  color: #bb0000;
-  background: #fefefe;
-  border-color: #bb0000;
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: aliceblue;
 }
 
-.rounded-social-buttons .social-button.instagram {
-  background: #125688;
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #d10707;
+  color: aliceblue;
 }
 
-.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
-  color: #125688;
-  background: #fefefe;
-  border-color: #125688;
-}
 </style>
-<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 
 
 <footer>
-  <div class="rounded-social-buttons">
-                    <a class="social-button facebook" href="https://web.facebook.com/profile.php?id=61563444336398" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="social-button twitter" href="https://t.me/medemia_academy" target="_blank"><i class="fab fa-telegram"></i></a>
-                    <a class="social-button youtube" href="https://www.youtube.com/channel/UC5Yn6SucTzKa2Yin-8b4X5g" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-</footer>
+  <div class="social">
+    <p>Medemia Academy</p>
+    <ul class="wrapper">
 
+      <a href="#" target="_blank">
+        <li class="icon facebook">
+          <span class="tooltip">Facebook</span>
+          <span><i class="fab fa-facebook-f"></i></span>
+        </li>
+      </a>
+      <a href="https://www.youtube.com/@MedemiaAcademy" target="_blank">
+        <li class="icon Youtube">
+          <span class="tooltip">Youtube</span>
+          <span><i class="fab fa-youtube"></i></span>
+        </li>
+      </a>
+      <a href="https://t.me/medemia_academy" target="_blank">
+        <li class="icon linkedin">
+          <span class="tooltip">Telegrma</span>
+          <span><i class="fab fa-telegram"></i></span>
+        </li>
+      </a>
+
+    </ul>
+  </div>
+  <div style="text-align: center;" class="final_text"></div>
+  <p>Copyright &copy; All rights reserved 2024
+    <br> Medemia Academy
+  </p>
+</footer>
 </html>
