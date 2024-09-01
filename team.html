@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Our Staff</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+    <style>
+        body{
+            font-family: cairo, sans-serif;
+        }
+        .section-padding {
+            padding: 10px 0;
+        }
+        .section-title h2 {
+            position: relative;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        .section-title p {
+            color: #555;
+            text-align: right;
+        }
+        .section-title h2:before {
+            position: absolute;
+            content: "";
+            top: 100%;
+            right: 0;
+            width: 55px;
+            height: 6px;
+            background: #ECECEB;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+        .imgstaff {
+            width: 150px !important;
+            height: 150px; /* Set a fixed height for better centering */
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .section-title h2:after {
+            position: absolute;
+            content: "";
+            top: 100%;
+            right: 0;
+            width: 45px;
+            height: 6px;
+            background: #6e0202;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+        .owl-carousel {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .single-staff-item {
+            text-align: center;
+            padding: 15px;
+            background: #18222c;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            opacity: 0.5;
+            transform: scale(0.8);
+            max-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            text-align: center; /* Ensure text is centered */
+            margin-top: 50px;
+            
+        }
+        .single-staff-item.active {
+            opacity: 1;
+            transform: scale(1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .single-staff-item img {
+            max-width: 100%;
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            margin-top: -60px;
+        }
+        .staff-meta h3 {
+            font-size: 1.7rem;
+            color: #ffffff;
+            margin: 0;
+        }
+        .staff-meta p {
+            color: #fcfcfc;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        .staff-desc {
+            color: #a7a7a7;
+            font-size: 1rem;
+            margin-top: 6px;
+            min-height: 70px;
+        }
+        .owl-nav {
+            position: absolute;
+            top: 40%;
+            text-align: center;
+            align-items: center;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 5 10px;
+            color: #6e0202;
+        }
+        .owl-nav button {
+            background-color: #14ADF3;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            font-size: 1.2rem;
+        }
+        .owl-nav button:hover {
+            background-color: #0a79b1;
+        }
+        .owl-nav .owl-prev {
+            background: url('https://cdn.jsdelivr.net/npm/font-awesome@5.15.3/svgs/solid/chevron-right.svg') no-repeat center center;
+            background-size: 50%;
+        }
+        .owl-nav .owl-next {
+            background: url('https://cdn.jsdelivr.net/npm/font-awesome@5.15.3/svgs/solid/chevron-left.svg') no-repeat center center;
+            background-size: 50%;
+        }
+        @media (max-width: 767.98px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            .single-staff-item {
+                padding: 15px;
+                transform: scale(0.9);
+            }
+            .staff-desc {
+                font-size: 0.85rem;
+            }
+            .owl-nav button {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="section-title">
+                        <h2>فريقنا</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel staff-list">
+                        <!-- 15 Staff Members -->
+                        <!-- Staff Member 1 -->
+                        <div class="single-staff-item">
+                            <img class="imgstaff" src="https://www.shootproof.com/wp-content/uploads/1-1-ratio_Morgan-Caddell-2191-scaled.jpg" alt="">
+                            <div class="staff-meta">
+                                <h3> منذر القطاونة </h3>
+                                <p>إداري</p>
+                            </div>
+                            <p class="staff-desc">لوريم إيبسوم دولور سيت أميت، كونستيتور أديبيسيسينغ إيليت. إكسكبتوركونستيتور أديبيسيسينغ إيليت. إكسكبتوركونستيتور أديبيسيسينغ إيليت. إكسكبتوركونستيتور أديبيسيسينغ إيليت. إكسكبتوركونستيتور أديبيسيسينغ إيليت. إكسكبتوري فولبتاتوم أومنس دولوريمي.</p>
+                        </div>
+                        <div class="single-staff-item">
+                            <img class="imgstaff" src="http://placehold.it/500x500" alt="">
+                            <div class="staff-meta">
+                                <h3>محمود بركات</h3>
+                                <p>فيلسوف</p>
+                            </div>
+                            <p class="staff-desc">لوريم إيبسوم دولور سيت أميت، كونستيتور أديبيسيسينغ إيليت. إكسكبتوري فولبتاتوم أومنس دولوريمي.</p>
+                        </div>
+                        <div class="single-staff-item">
+                            <img class="imgstaff" src="http://placehold.it/500x500" alt="">
+                            <div class="staff-meta">
+                                <h3>جون دو</h3>
+                                <p>فيلسوف</p>
+                            </div>
+                            <p class="staff-desc">لوريم إيبسوم دولور سيت أميت، كونستيتور أديبيسيسينغ إيليت. إكسكبتوري فولبتاتوم أومنس دولوريمي.</p>
+                        </div>
+                        <div class="single-staff-item">
+                            <img class="imgstaff" src="http://placehold.it/500x500" alt="">
+                            <div class="staff-meta">
+                                <h3>جون دو</h3>
+                                <p>فيلسوف</p>
+                            </div>
+                            <p class="staff-desc">لوريم إيبسوم دولور سيت أميت، كونستيتور أديبيسيسينغ إيليت. إكسكبتوري فولبتاتوم أومنس دولوريمي.</p>
+                        </div>
+                        <!-- Add remaining staff members similarly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var owl = $(".owl-carousel").owlCarousel({
+                items: 3,
+                autoplay: true,
+                autoplayTimeout: 5000, // 5 seconds
+                autoplayHoverPause: true, // Pause on hover
+                margin: 5,
+                loop: true,
+                nav: true,
+                rtl: true, // Enable RTL for Arabic
+                navText: ["<i class='fas fa-chevron-right'></i>", "<i class='fas fa-chevron-left'></i>"],
+                center: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    900: {
+                        items: 3
+                    }
+                }
+            });
+        
+            // Function to update the active class
+            function updateActiveClass() {
+                // Remove active class from all items
+                $('.single-staff-item').removeClass('active');
+                // Find and add active class to the center item
+                var centerItem = $('.owl-item.center .single-staff-item');
+                centerItem.addClass('active');
+            }
+        
+            // Initialize the active class when the carousel is first loaded
+            owl.on('initialized.owl.carousel', function() {
+                setTimeout(updateActiveClass, 100); // Delay to ensure initialization is complete
+            });
+        
+            // Update active class when items change
+            owl.on('changed.owl.carousel', function() {
+                setTimeout(updateActiveClass, 100); // Delay to ensure update is complete
+            });
+        
+            // Initial update if carousel has already been initialized
+            setTimeout(updateActiveClass, 100);
+        });
+        </script>
+        
+</body>
+</html>
