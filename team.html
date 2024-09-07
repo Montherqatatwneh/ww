@@ -18,11 +18,10 @@
     <style>
         body{
             font-family: cairo, sans-serif;
-            wid
         }
         .section-padding {
             padding: 10px 0;
-            width: 100s%;
+            width: 100%;
         }
         .section-title h2 {
             position: relative;
@@ -46,6 +45,14 @@
             border-radius: 15px;
             margin-top: 10px;
         }
+        .hosp {
+            background-color: #ffffff;
+            padding: 0px 10px;
+            border-radius: 20px;
+            color: #18222c;
+            font-weight: bold;
+            margin-top: 5px !important;
+        }
 
         .section-title h2:after {
             position: absolute;
@@ -66,24 +73,24 @@
         .single-staff-item {
             text-align: center;
             padding: 15px;
-            background: #18222c;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, #18222c, #072542);
+            border-radius: 15px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             margin-bottom: 30px;
             opacity: 0.5;
-            transform: scale(0.8);
+            transform: scale(0.7);
             max-height: 500px;
             display: flex;
             flex-direction: column;
             align-items: center; /* Center horizontally */
             justify-content: center; /* Center vertically */
-            text-align: center; /* Ensure text is centered */
             margin-top: 60px;
-            line-height: 0.8cm;
+            line-height: 0.8cm;   
             
+        }
+        .single-staff-item:hover {
 
-            
         }
         .single-staff-item.active {
             opacity: 1;
@@ -105,12 +112,12 @@
         .staff-meta p {
             color: #fcfcfc;
             font-size: 1.1rem;
-            margin: 5px 0;
+            margin: 1px 0;
         }
         .staff-desc {
-            color: #b6b5b5;
-            font-size: 1rem;
-            margin-top: 6px;
+            color: #c0bfbf;
+            font-size: 1.05rem;
+            margin-top: -15px;
             min-height: 70px;
         }
         .owl-nav {
@@ -189,8 +196,8 @@
                                 <h3> د. محمود بركات </h3>
                                 <p>Teacher & Manager </p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - المستشفى الإستشاري </span>
                             <p class="staff-desc">
-                                طيبب إمتياز في مستشفى الإستشاري
                             <br>   USMLE Step 1 pass 
                             <br> أسطورة العمل الأكاديمي في كلية الطب 
                             <br> مدرس لمواد الكيمياء الحيوية والمناعة الطبية وعلم الأدوية  وعلم الأحياء الدقيقة 
@@ -202,8 +209,9 @@
                                 <h3>د. راما أبوقديري </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى الجامعة الأردنية </span>
+
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى الجامعة الأردنية
                             <br>  حاصلة على الترتيب الثاني على خريجي دفعة 2018 
                             <br> مدرسة لمواد الكيمياء الحيوية والمناعة الطبية
                              
@@ -215,8 +223,8 @@
                                 <h3>د. ريف القيسي </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى الكرك الحكومي </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى الكرك الحكومي 
                                 <br>  حاصلة على الترتيب الثالث على خريجي دفعة 2018 
                                 <br> مدرسة لمواد علم الأحياء الدقيقة  وموديول  RS 
                             </p>
@@ -227,10 +235,10 @@
                                 <h3>د. ليث النجادا </h3>
                                 <p>Teacher & Manager </p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى الجامعة الأردنية </span>
                             <p class="staff-desc">
-                             طبيب إمتياز في مستشفى الجامعة الأردنية
                                 <br>   USMLE Step 1 In Progress 
-                             <br> مدرس لمواد علم الأمراض  وموديول RS
+                             <br> مدرس لمادة علم الأمراض  وموديول RS
                              
                             </p>
                         </div>
@@ -240,10 +248,10 @@
                                 <h3>د. مؤنس الرشدان </h3>
                                 <p>Teacher & Manager </p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى .. الحكومي </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى 
                             <br> USMLE Step 1 pass
-                            <br> مدرس لمواد الكيمياء الحيوية وموديول RS 
+                            <br> مدرس لمادة الكيمياء الحيوية وموديول RS 
                             </p>
                         </div>
                         <div class="single-staff-item">
@@ -252,10 +260,10 @@
                                 <h3>د. محمد العمايرة </h3>
                                 <p> Teacher & Manager </p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى .. الحكومي </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى 
                                 <br> المسؤول العام للأكاديمية وإدراة الموقع
-                                <br> مدرس لمـــادة بيولوجيا الخلية
+                                <br> مدرس لمادة بيولوجيا الخلية
                             </p>
                         </div>
                         <div class="single-staff-item">
@@ -264,8 +272,8 @@
                                 <h3>د. عزت العبابنة </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى  </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى 
                                 <br> خبير في إنشاء المخلصات للمواد 
                                 <br> مدرس لمواد علم الأدوية  و علم الاحياء الدقيقة 
                             </p>
@@ -276,11 +284,10 @@
                                 <h3>د. منذر القطاونة </h3>
                                 <p>Manager </p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى الكرك الحكومي </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى الكرك الحكومي
                                 <br> مسؤول سابق للجنة الطب والجراحة عام 2022م
                                 <br> خبير في المجال الإداري والأكاديمي
-                                <br> مسؤول عن متابعة شؤون الطلبة والمدرسين في الأكاديمية
                             </p>
                         </div>
                         <div class="single-staff-item">
@@ -289,10 +296,10 @@
                                 <h3>د. حلا عماد </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى الجامعة الأردنية </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى الجامعة الأردنية
                                 <br> خريج إمتياز لدفعة 2018
-                                <br> مدرس لمواد موديول RS وموديول CVS
+                                <br> مدرسة لموديولي الـ RS و CVS
                             </p>
                         </div>
                         <div class="single-staff-item">
@@ -301,8 +308,8 @@
                                 <h3>د. اسلام البنوي </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى الكرك الحكومي </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى الكرك الحكومي
                                 <br> خريج إمتياز لدفعة 2018
                                 <br> مدرس لمواد علم الأمراض  و علم الأحياء الدقيقة 
                             </p>
@@ -313,10 +320,9 @@
                                 <h3>د. ابراهيم أبو سالم </h3>
                                 <p>Teacher & Manager </p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى التوتنجي الحكومي </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى التوتنجي الحكومي
                                 <br> مدرس لمواد بيولوجيا الخلية و موديول RS
-                                <br> مسؤول رفع التسجيلات على موقع الأكاديمية
                             </p>
                         </div>
                         <div class="single-staff-item">
@@ -325,8 +331,8 @@
                                 <h3>د. مريم الضباعين </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى   </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى  
                                 <br>   USMLE Step 1 In Progress 
                                 <br> مدرسة لمواد علم الأدوية  وموديول CVS
                             </p>
@@ -337,11 +343,11 @@
                                 <h3>د. صلاح سائد </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى الأمير حمزة </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى الأمير حمزة 
                                 <br>   USMLE Step 1 In Progress 
                                 <br>   مسؤول سابق لمشروع حافظ مؤتة
-                                <br> مدرس لمواد موديول RS وموديول CVS
+                                <br> مدرس  لموديولي الـ RS و CVS
                             </p>
                         </div>
                         <div class="single-staff-item">
@@ -350,8 +356,8 @@
                                 <h3>د. عبدالسلام البطوش </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى الكرك الحكومي </span>
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى الكرك الحكومي
                                 <br>   مسؤول سابق لمشروع مدكر - مؤتة
                                 <br> مدرس لمواد علم الأمراض  وموديول RS
                             </p>
@@ -362,9 +368,8 @@
                                 <h3>د. أحمد الدعباس </h3>
                                 <p>Teacher</p>
                             </div>
+                            <span class="hosp">طبيب إمتياز - مستشفى النديم الحكومي </span>                                
                             <p class="staff-desc">
-                                طبيب إمتياز في مستشفى النديم الحكومي
-                                
                                 <br> مدرس لمواد موديول RS و موديول CVS
                             </p>
                         </div>
@@ -440,5 +445,3 @@ $(document).ready(function(){
         
 </body>
 </html>
-
-
