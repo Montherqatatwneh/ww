@@ -1,0 +1,354 @@
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Stylish Pricing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            :root {
+                --card-bg: #ffffff;
+                --border: 1px solid #3c3c3a;
+                --shadow: 0px 10px 15px 0.3px rgba(0, 0, 0, 0.411);
+                --text: #ffffff;
+                --title: #000000;
+                --sub-text: #909090;
+                --price-bg: #990000;
+                --price-hover-bg: #b1b1b1;
+                --price-hover-tx: #990000;
+
+            }
+
+            * {
+
+                font-family: "cairo", sans-serif;
+            }
+
+
+            .section-title h2 {
+            position: relative;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: right;
+            margin-right: 7px;
+            padding: 0;
+           }
+           .section-title p {
+            color: #555;
+            text-align: right;
+        }
+        .section-title h2:before {
+            position: absolute;
+            content: "";
+            top: 100%;
+            right: 0;
+            width: 350px;
+            height: 6px;
+            background: #ECECEB;
+            border-radius: 15px;
+            margin-top: -2px;
+        }
+        .section-title h2:after {
+            position: absolute;
+            content: "";
+            top: 100%;
+            right: 0;
+            width: 300px;
+            height: 6px;
+            background: #6e0202;
+            border-radius: 15px;
+            margin-top: -2px;
+        }
+
+            .slider {
+                max-width: 100%;
+                display: flex;
+                background: transparent;
+                padding: 10px 0;
+
+}
+
+.slider .card {
+    margin: 15px; /* Adjusted margin */
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    line-height: normal;
+    height: 430px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.slider .card .img {
+    height: 213px;
+    margin: 16px;
+    width: calc(100% - 32px);
+    border-radius: 0px;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.slider .card .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+}
+
+.slider .card .img img:hover {
+    transform: scale(1.25) rotate(6deg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.slider .card .content {
+    padding: 2px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 300px); /* Adjust to fit the image height */
+}
+            .card .content .title {
+                font-size: 30px;
+                font-weight: 500;
+                color: var(--title);
+                margin-bottom: -15px;
+                margin-top: -20px;
+            }
+
+            .card .content .sub-title {
+                font-size: 20px;
+                font-weight: 400;
+                color: var(--sub-text);
+                margin-bottom: 8px;
+            }
+
+            .card .content .price {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 16px;
+            }
+
+            .card .content .price .price-item {
+                position: relative;
+                background: var(--price-bg);
+                color: var(--text);
+                font-size: 20px;
+                padding: 17px 15px;
+                border-radius: 15px;
+                margin-bottom: 8px;
+                width: 40%;
+                overflow: hidden;
+                text-align: center;
+                transition: all 0.5s ease;
+                text-overflow: ellipsis;
+                font-weight: bold;
+            }
+            .card .content .price .price-item:hover{
+                width: 30%;
+                margin-right: 20px;
+                border-radius: 10px 30px;
+                background-color: var(--price-hover-bg);  
+                color: var(--price-hover-tx);
+            }
+
+            .card .content .price .price-item:hover .price-label {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            .card .content .price .price-item:hover .price-value {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            .card .content .price .price-item .price-label,
+            .card .content .price .price-item .price-value {
+                position: absolute;
+                top: -2;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+
+            .card .content .price .price-item .price-value {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            .card .content button {
+                position: absolute;
+                width: 100px;
+                height: 40px;
+                bottom: 10px;
+                right: 10px;
+                font-size: 16px;
+                background-color: var(--price-bg);
+                border: none;
+                border-radius: 20px;
+                color: var(--text);
+                opacity: 0;
+                font-weight: bolder;
+                text-transform: uppercase;
+                transition: opacity 0.2s ease-out, background-color 0.3s ease;
+            }
+
+            .card:hover button {
+                opacity: 1;
+            }
+
+            .card button:hover {
+                background-color: var(--price-hover-bg);
+                
+                color: var(--price-hover-tx);
+
+            }
+            @media (max-width: 768px) {
+                .slider {
+                    transform: scale(3) !important;
+                }
+
+            .slider .card {
+                transform: scale(0.28) translateX(250px) !important;
+                margin-left: 150px !important;
+                margin-right: 150px !important;
+
+            }
+            .section-title h2 {
+                transform: scale(0.9);
+                margin-right: -20px;
+            }
+    }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="section-title">
+                        <h2>كورسات الفصل الأول</h2>
+                    </div>
+                </div>
+            </div>        
+            <div class="slider owl-carousel">
+            <div class="card">
+                <div class="img">
+                    <img src="https://medemia.me/pluginfile.php/269/course/overviewfiles/cell%20biologyy.png" />
+                </div>
+                <div class="content">
+                    <div class="title">
+                        Course 1kkmkj
+                    </div>
+                    <div class="sub-title">
+                        Category 1
+                    </div>
+                    <div class="price">
+                        <div class="price-item">
+                            <span class="price-label">Full Course</span>
+                            <span class="price-value">100 JD</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">Mid Course</span>
+                            <span class="price-value">$50</span>
+                        </div>
+                    </div>
+                    <button>Buy NOW</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTNQx6dAy_XJh-wLZwOd5qGL63kg_JOHHqe8QJOsg5-C9HYswaFOAvHAkOx-KLHxsSU" />
+                </div>
+                <div class="content">
+                    <div class="title">
+                        Course 2
+                    </div>
+                    <div class="sub-title">
+                        Category 2
+                    </div>
+                    <div class="price">
+                        <div class="price-item">
+                            <span class="price-label">Full Course</span>
+                            <span class="price-value">Free</span>
+                        </div><br>
+
+                    </div>
+                    <button> Free</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="https://medemia.me/pluginfile.php/378/course/overviewfiles/CVSys.png" />
+                </div>
+                <div class="content">
+                    <div class="title">
+                        Course 133
+                    </div>
+                    <div class="sub-title">
+                        Category 1
+                    </div>
+                    <div class="price">
+                        <div class="price-item">
+                            <span class="price-label">Full Course</span>
+                            <span class="price-value">$100</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">Mid Course</span>
+                            <span class="price-value">$50</span>
+                        </div>
+                    </div>
+                    <button>Buy NOW</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTNQx6dAy_XJh-wLZwOd5qGL63kg_JOHHqe8QJOsg5-C9HYswaFOAvHAkOx-KLHxsSU" />
+                </div>
+                <div class="content">
+                    <div class="title">
+                        Course 4
+                    </div>
+                    <div class="sub-title">
+                        Category 4
+                    </div>
+                    <div class="price">
+                        <div class="price-item">
+                            <span class="price-label">Full Course</span>
+                            <span class="price-value">$100</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">Mid Course</span>
+                            <span class="price-value">$50</span>
+                        </div>
+                    </div>
+                    <button>Buy NOW</button>
+                </div>
+            </div>
+
+            <!-- Repeat for other cards -->
+        </div>
+        <script>
+            $(".slider").owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+            });
+        </script>
+    </body>
+</html>
